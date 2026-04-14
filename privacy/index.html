@@ -285,7 +285,7 @@
 <div class="hero">
   <h1>Politique de confidentialité</h1>
   <p>Skenta collecte uniquement les données strictement nécessaires au fonctionnement du service. Ce document décrit de manière exhaustive la nature des données traitées, leur finalité et vos droits.</p>
-  <div class="date">Dernière mise à jour : 14 avril 2026</div>
+  <div class="date">Dernière mise à jour : 14 avril 2026 — v1.1</div>
 </div>
 
 <!-- CONTENT -->
@@ -312,7 +312,7 @@
   <div class="section-label">Données collectées et finalités</div>
 
   <div class="card">
-    <h2>Localisation GPS</h2>
+    <h2>Localisation GPS — Utilisation au premier plan uniquement</h2>
     <p>Votre position géographique est utilisée pour identifier les stations-service proches de vous et calculer les distances. Elle n'est jamais stockée sur nos serveurs.</p>
     <div class="list">
       <div class="list-item">
@@ -320,12 +320,16 @@
         <p><strong>Base légale :</strong> Intérêt légitime — fourniture d'un service de proximité (Article 6.1.f du RGPD)</p>
       </div>
       <div class="list-item">
-        <div class="list-item-marker green"></div>
-        <p>Les coordonnées GPS sont transmises à notre serveur pour la recherche de stations, puis supprimées immédiatement. Aucun historique de localisation n'est conservé.</p>
+        <div class="list-item-marker"></div>
+        <p><strong>Quand ?</strong> Uniquement lorsque vous utilisez activement Skenta (application au premier plan). Skenta n'accède jamais à votre localisation en arrière-plan.</p>
       </div>
       <div class="list-item">
         <div class="list-item-marker green"></div>
-        <p>Votre localisation n'est jamais partagée avec des tiers à des fins publicitaires ou de profilage.</p>
+        <p><strong>Comment ?</strong> Les coordonnées GPS sont transmises à notre serveur pour la recherche de stations proches, puis supprimées immédiatement. Aucun historique de localisation n'est conservé.</p>
+      </div>
+      <div class="list-item">
+        <div class="list-item-marker green"></div>
+        <p><strong>Partage ?</strong> Votre localisation n'est jamais partagée avec des tiers à des fins publicitaires ou de profilage.</p>
       </div>
     </div>
   </div>
@@ -344,11 +348,23 @@
       </div>
       <div class="list-item">
         <div class="list-item-marker orange"></div>
-        <p><strong>Durée de conservation :</strong> suppression automatique après 90 jours d'inactivité.</p>
+        <p><strong>Durée de conservation :</strong> Le token est supprimé automatiquement dans les cas suivants :</p>
       </div>
       <div class="list-item">
         <div class="list-item-marker green"></div>
-        <p>Vous pouvez supprimer votre token à tout moment via <em>Paramètres &rarr; Effacer mes données</em>.</p>
+        <p><strong>Immédiatement</strong> lors de la désinstallation de l'application</p>
+      </div>
+      <div class="list-item">
+        <div class="list-item-marker green"></div>
+        <p><strong>Immédiatement</strong> via <em>Paramètres &rarr; Effacer mes données</em></p>
+      </div>
+      <div class="list-item">
+        <div class="list-item-marker orange"></div>
+        <p><strong>Après 180 jours</strong> par les serveurs Firebase en cas d'inactivité</p>
+      </div>
+      <div class="list-item">
+        <div class="list-item-marker green"></div>
+        <p>Vous pouvez demander la suppression manuelle du token à tout moment via <a href="mailto:contact@skenta.app">contact@skenta.app</a>.</p>
       </div>
     </div>
     <div class="notice notice-amber">
@@ -425,6 +441,28 @@
     </div>
   </div>
 
+  <!-- 3b. Sécurité -->
+  <div class="section-label">Sécurité des données</div>
+
+  <div class="card">
+    <h2>Protection des données en transit</h2>
+    <p>Toutes les transmissions de données entre Skenta et nos serveurs sont chiffrées via le protocole HTTPS (Transport Layer Security — TLS 1.2 ou supérieur).</p>
+    <div class="list">
+      <div class="list-item">
+        <div class="list-item-marker green"></div>
+        <p>Vos données ne sont jamais transmises en clair sur le réseau.</p>
+      </div>
+      <div class="list-item">
+        <div class="list-item-marker green"></div>
+        <p>Les données sensibles (localisation, token FCM) sont supprimées des serveurs dès que le traitement est terminé.</p>
+      </div>
+      <div class="list-item">
+        <div class="list-item-marker orange"></div>
+        <p>Bien que nous prenions toutes les mesures raisonnables pour sécuriser vos données, aucune transmission par Internet n'est garantie à 100% sécurisée.</p>
+      </div>
+    </div>
+  </div>
+
   <!-- 4. Sous-traitants -->
   <div class="section-label">Sous-traitants</div>
 
@@ -497,8 +535,8 @@
         </tr>
         <tr>
           <td>Token FCM</td>
-          <td>90 jours d'inactivité</td>
-          <td>Automatique ou sur demande</td>
+          <td>180 jours d'inactivité (Firebase)</td>
+          <td>Immédiat à la désinstallation, ou sur demande</td>
         </tr>
         <tr>
           <td>Alertes de prix</td>
@@ -530,6 +568,45 @@
   <div class="card">
     <h2>Protection des mineurs</h2>
     <p>Skenta n'est pas destinée aux personnes de moins de 16 ans et ne collecte pas sciemment de données les concernant. Si vous êtes le représentant légal d'un mineur et pensez que celui-ci a utilisé l'application, veuillez nous contacter à <a href="mailto:contact@skenta.app">contact@skenta.app</a> afin que nous procédions à la suppression des données associées.</p>
+  </div>
+
+  <!-- Conformité Google Play -->
+  <div class="card">
+    <h2>Déclaration de conformité Google Play</h2>
+    <p>Cette politique de confidentialité satisfait aux exigences du Google Play Store :</p>
+    <div class="list">
+      <div class="list-item">
+        <div class="list-item-marker green"></div>
+        <p>Identification claire du responsable du traitement</p>
+      </div>
+      <div class="list-item">
+        <div class="list-item-marker green"></div>
+        <p>Énumération complète des données collectées et de leurs finalités</p>
+      </div>
+      <div class="list-item">
+        <div class="list-item-marker green"></div>
+        <p>Précision sur les transferts vers des tiers (Google LLC) et encadrement par les CCT (Article 46 RGPD)</p>
+      </div>
+      <div class="list-item">
+        <div class="list-item-marker green"></div>
+        <p>Droits d'accès, rectification, suppression (Articles 15-17 RGPD)</p>
+      </div>
+      <div class="list-item">
+        <div class="list-item-marker green"></div>
+        <p>Droit de retrait du consentement (Article 7 RGPD) et de réclamation auprès de la CNIL (Article 77 RGPD)</p>
+      </div>
+      <div class="list-item">
+        <div class="list-item-marker green"></div>
+        <p>Localisation utilisée au premier plan uniquement — aucun tracking arrière-plan</p>
+      </div>
+      <div class="list-item">
+        <div class="list-item-marker green"></div>
+        <p>Données locales (véhicules, favoris, préférences) qui ne quittent jamais l'appareil</p>
+      </div>
+    </div>
+    <div class="notice notice-green">
+      <p>Skenta ne dispose pas de système de compte utilisateur. Toutes les données sont liées à l'appareil uniquement. La désinstallation entraîne la suppression complète de toutes les données dans un délai maximum de 180 jours.</p>
+    </div>
   </div>
 
   <div class="card">
