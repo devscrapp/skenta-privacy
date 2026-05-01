@@ -6,892 +6,387 @@
   <title>Politique de confidentialité — Skenta</title>
   <meta name="description" content="Politique de confidentialité de l'application Skenta — prix carburant en temps réel en France." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --blue-dark:  #1A3A5C;
-      --blue-mid:   #1A56A0;
-      --blue-light: #EBF2FF;
-      --gray-bg:    #F4F6F9;
-      --border:     #E2E8F0;
-      --text:       #1A202C;
-      --text-muted: #64748B;
-      --green:      #1B8A4C;
-      --green-bg:   #EDFAF3;
-      --orange:     #E8650A;
-      --orange-bg:  #FFF4EC;
-      --red:        #C0392B;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--gray-bg);
-      color: var(--text);
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #0F1117;
+      color: #C9D1D9;
       font-size: 15px;
-      line-height: 1.7;
+      line-height: 1.75;
     }
 
-    /* ── HEADER ── */
+    a { color: #58A6FF; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
     header {
-      background: var(--blue-dark);
-      padding: 0 24px;
-    }
-    .header-inner {
-      max-width: 860px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 64px;
-    }
-    .logo {
+      border-bottom: 1px solid #21262D;
+      padding: 18px 24px;
       display: flex;
       align-items: center;
       gap: 10px;
-      text-decoration: none;
     }
-    .logo-icon {
-      width: 36px;
-      height: 36px;
-      background: var(--blue-mid);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18px;
+    .logo-mark {
+      font-size: 22px;
     }
     .logo-name {
-      font-family: 'Manrope', sans-serif;
-      font-weight: 800;
-      font-size: 20px;
-      color: #fff;
-      letter-spacing: -0.3px;
-    }
-    .logo-tag {
-      font-size: 11px;
-      color: rgba(255,255,255,0.55);
-      font-weight: 400;
-    }
-
-    /* ── HERO ── */
-    .hero {
-      background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue-mid) 100%);
-      padding: 56px 24px 48px;
-      text-align: center;
-    }
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: 20px;
-      padding: 5px 14px;
-      font-size: 12px;
-      color: rgba(255,255,255,0.85);
-      font-family: 'Manrope', sans-serif;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-    }
-    .hero h1 {
-      font-family: 'Manrope', sans-serif;
-      font-size: clamp(26px, 5vw, 38px);
-      font-weight: 800;
-      color: #fff;
-      margin-bottom: 14px;
-      letter-spacing: -0.5px;
-    }
-    .hero p {
-      font-size: 15px;
-      color: rgba(255,255,255,0.72);
-      max-width: 520px;
-      margin: 0 auto 24px;
-    }
-    .hero-meta {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(255,255,255,0.1);
-      border-radius: 8px;
-      padding: 8px 16px;
-      font-size: 13px;
-      color: rgba(255,255,255,0.7);
-    }
-    .hero-meta strong { color: rgba(255,255,255,0.95); }
-
-    /* ── LAYOUT ── */
-    .page {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 40px 24px 80px;
-    }
-
-    /* ── CONFORMITÉ BADGES ── */
-    .compliance-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 12px;
-      margin-bottom: 40px;
-    }
-    .compliance-badge {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 16px;
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-    }
-    .badge-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 9px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18px;
-      flex-shrink: 0;
-    }
-    .badge-icon.green  { background: var(--green-bg); }
-    .badge-icon.blue   { background: var(--blue-light); }
-    .badge-icon.orange { background: var(--orange-bg); }
-    .badge-label {
-      font-family: 'Manrope', sans-serif;
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.4px;
-    }
-    .badge-value {
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--text);
-      margin-top: 2px;
-    }
-
-    /* ── SECTION ── */
-    .section {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      margin-bottom: 20px;
-      overflow: hidden;
-    }
-    .section-header {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      padding: 20px 24px;
-      border-bottom: 1px solid var(--border);
-      background: var(--gray-bg);
-    }
-    .section-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      flex-shrink: 0;
-    }
-    .section-icon.blue   { background: var(--blue-light); }
-    .section-icon.green  { background: var(--green-bg); }
-    .section-icon.orange { background: var(--orange-bg); }
-    .section-icon.red    { background: #FDECEA; }
-    .section-title {
-      font-family: 'Manrope', sans-serif;
       font-size: 17px;
       font-weight: 700;
-      color: var(--blue-dark);
+      color: #F0F6FC;
     }
-    .section-subtitle {
-      font-size: 12px;
-      color: var(--text-muted);
-      margin-top: 2px;
+    .logo-sep {
+      color: #30363D;
+      margin: 0 6px;
     }
-    .section-body {
-      padding: 24px;
+    .logo-page {
+      font-size: 14px;
+      color: #8B949E;
     }
 
-    /* ── DATA CARDS ── */
-    .data-card {
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      overflow: hidden;
-      margin-bottom: 16px;
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 56px 24px 96px;
     }
-    .data-card:last-child { margin-bottom: 0; }
-    .data-card-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 18px;
-      background: var(--gray-bg);
-      border-bottom: 1px solid var(--border);
-    }
-    .data-card-title {
-      font-family: 'Manrope', sans-serif;
+
+    .page-title {
+      font-size: 26px;
       font-weight: 700;
-      font-size: 14px;
-      color: var(--text);
+      color: #F0F6FC;
+      margin-bottom: 6px;
     }
-    .pill {
+    .page-meta {
+      font-size: 13px;
+      color: #8B949E;
+      margin-bottom: 48px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid #21262D;
+    }
+
+    .intro {
+      background: #161B22;
+      border: 1px solid #21262D;
+      border-radius: 8px;
+      padding: 18px 20px;
+      font-size: 14px;
+      color: #8B949E;
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-size: 16px;
+      font-weight: 600;
+      color: #F0F6FC;
+      margin-top: 40px;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #21262D;
+    }
+
+    h3 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #E6EDF3;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-bottom: 12px;
+      color: #C9D1D9;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+    li {
+      margin-bottom: 5px;
+      color: #C9D1D9;
+    }
+
+    .badge {
+      display: inline-block;
       font-size: 11px;
       font-weight: 600;
-      font-family: 'Manrope', sans-serif;
-      padding: 3px 10px;
-      border-radius: 20px;
-      letter-spacing: 0.3px;
+      padding: 2px 8px;
+      border-radius: 12px;
+      margin-left: 8px;
+      vertical-align: middle;
     }
-    .pill-green  { background: var(--green-bg);  color: var(--green); }
-    .pill-blue   { background: var(--blue-light); color: var(--blue-mid); }
-    .pill-orange { background: var(--orange-bg);  color: var(--orange); }
-    .pill-gray   { background: #F1F5F9; color: var(--text-muted); }
-    .data-card-body { padding: 16px 18px; }
-    .data-card-body p { font-size: 14px; color: #374151; margin-bottom: 10px; }
-    .data-card-body p:last-child { margin-bottom: 0; }
+    .badge-green  { background: #0D1117; color: #3FB950; border: 1px solid #238636; }
+    .badge-blue   { background: #0D1117; color: #58A6FF; border: 1px solid #1F6FEB; }
+    .badge-gray   { background: #0D1117; color: #8B949E; border: 1px solid #30363D; }
 
-    /* ── META ROW ── */
-    .meta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 12px;
-    }
-    .meta-item {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      font-size: 12px;
-      color: var(--text-muted);
-      background: var(--gray-bg);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 4px 10px;
-    }
-    .meta-item strong { color: var(--text); }
-
-    /* ── HIGHLIGHT BOX ── */
-    .highlight {
-      border-radius: 10px;
-      padding: 14px 16px;
-      margin-bottom: 12px;
+    .note {
+      background: #161B22;
+      border: 1px solid #21262D;
+      border-left: 3px solid #30363D;
+      border-radius: 0 6px 6px 0;
+      padding: 12px 16px;
       font-size: 13.5px;
+      color: #8B949E;
+      margin-bottom: 12px;
     }
-    .highlight:last-child { margin-bottom: 0; }
-    .highlight.blue   { background: var(--blue-light);  border-left: 3px solid var(--blue-mid); }
-    .highlight.green  { background: var(--green-bg);    border-left: 3px solid var(--green); }
-    .highlight.orange { background: var(--orange-bg);   border-left: 3px solid var(--orange); }
-    .highlight.gray   { background: var(--gray-bg);     border-left: 3px solid var(--border); }
-    .highlight strong { font-weight: 700; display: block; margin-bottom: 4px; }
+    .note.green { border-left-color: #238636; }
+    .note.blue  { border-left-color: #1F6FEB; }
+    .note.orange{ border-left-color: #9E6A03; color: #E3B341; background: #161005; }
 
-    /* ── TABLE ── */
-    .table-wrap { overflow-x: auto; margin-top: 4px; }
     table {
       width: 100%;
       border-collapse: collapse;
       font-size: 13.5px;
+      margin-bottom: 16px;
     }
-    thead { background: var(--gray-bg); }
     th {
       text-align: left;
-      padding: 10px 14px;
-      font-family: 'Manrope', sans-serif;
+      padding: 9px 12px;
+      background: #161B22;
+      color: #8B949E;
       font-size: 11px;
-      font-weight: 700;
-      color: var(--text-muted);
+      font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.4px;
-      border-bottom: 1px solid var(--border);
+      border-bottom: 1px solid #21262D;
     }
     td {
-      padding: 11px 14px;
-      border-bottom: 1px solid var(--border);
-      color: var(--text);
+      padding: 10px 12px;
+      border-bottom: 1px solid #21262D;
+      color: #C9D1D9;
       vertical-align: top;
     }
     tr:last-child td { border-bottom: none; }
-    tr:hover td { background: #FAFBFC; }
 
-    /* ── RIGHTS LIST ── */
-    .rights-list { list-style: none; }
-    .rights-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      padding: 12px 0;
-      border-bottom: 1px solid var(--border);
-      font-size: 14px;
+    .table-wrap {
+      border: 1px solid #21262D;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 16px;
     }
-    .rights-list li:last-child { border-bottom: none; padding-bottom: 0; }
-    .rights-icon {
-      width: 28px;
-      height: 28px;
-      border-radius: 7px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      flex-shrink: 0;
-      background: var(--green-bg);
-    }
-    .rights-list li strong { display: block; font-weight: 600; margin-bottom: 2px; }
-    .rights-list li span { color: var(--text-muted); font-size: 13px; }
 
-    /* ── CONTACT CARD ── */
-    .contact-card {
-      background: linear-gradient(135deg, var(--blue-dark), var(--blue-mid));
-      border-radius: 16px;
-      padding: 32px;
+    .contact-block {
+      margin-top: 48px;
+      border: 1px solid #21262D;
+      border-radius: 8px;
+      padding: 24px;
       text-align: center;
-      color: #fff;
-      margin-top: 32px;
     }
-    .contact-card h3 {
-      font-family: 'Manrope', sans-serif;
-      font-size: 20px;
-      font-weight: 800;
-      margin-bottom: 10px;
-    }
-    .contact-card p {
-      font-size: 14px;
-      color: rgba(255,255,255,0.75);
-      margin-bottom: 20px;
-    }
+    .contact-block p { color: #8B949E; font-size: 14px; margin-bottom: 14px; }
     .contact-btn {
       display: inline-block;
-      background: #fff;
-      color: var(--blue-dark);
-      font-family: 'Manrope', sans-serif;
-      font-weight: 700;
-      font-size: 15px;
-      padding: 12px 28px;
-      border-radius: 10px;
-      text-decoration: none;
-      transition: opacity 0.15s;
+      background: #21262D;
+      color: #F0F6FC;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 10px 22px;
+      border-radius: 6px;
+      border: 1px solid #30363D;
     }
-    .contact-btn:hover { opacity: 0.9; }
+    .contact-btn:hover { background: #30363D; text-decoration: none; }
 
-    /* ── FOOTER ── */
     footer {
       text-align: center;
-      padding: 32px 24px;
-      border-top: 1px solid var(--border);
+      padding: 24px;
+      border-top: 1px solid #21262D;
       font-size: 12px;
-      color: var(--text-muted);
-    }
-    footer a { color: var(--blue-mid); text-decoration: none; }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 600px) {
-      .compliance-grid { grid-template-columns: 1fr 1fr; }
-      .section-body { padding: 18px; }
-      .contact-card { padding: 24px 18px; }
+      color: #484F58;
     }
   </style>
 </head>
 <body>
 
-<!-- HEADER -->
 <header>
-  <div class="header-inner">
-    <a class="logo" href="https://www.skenta.app">
-      <span class="logo-icon">⛽</span>
-      <span>
-        <span class="logo-name">Skenta</span><br>
-        <span class="logo-tag">Prix carburant en temps réel</span>
-      </span>
-    </a>
-  </div>
+  <span class="logo-mark">⛽</span>
+  <span class="logo-name">Skenta</span>
+  <span class="logo-sep">/</span>
+  <span class="logo-page">Politique de confidentialité</span>
 </header>
 
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-badge">🔒 Confidentialité &amp; RGPD</div>
-  <h1>Politique de confidentialité</h1>
-  <p>Skenta collecte uniquement les données strictement nécessaires au fonctionnement du service. Ce document décrit de manière exhaustive la nature des données traitées, leur finalité et vos droits.</p>
-  <div class="hero-meta">
-    📅 Dernière mise à jour : <strong>1er mai 2026 — v1.2</strong>
-  </div>
-</div>
+<div class="container">
 
-<!-- PAGE -->
-<div class="page">
+  <h1 class="page-title">Politique de confidentialité</h1>
+  <div class="page-meta">Dernière mise à jour : 1er mai 2026 — v1.2 &nbsp;·&nbsp; Application : <code>app.skenta.skenta</code></div>
 
-  <!-- CONFORMITÉ -->
-  <div class="compliance-grid">
-    <div class="compliance-badge">
-      <div class="badge-icon green">✅</div>
-      <div>
-        <div class="badge-label">Localisation</div>
-        <div class="badge-value">Premier plan uniquement</div>
-      </div>
-    </div>
-    <div class="compliance-badge">
-      <div class="badge-icon green">✅</div>
-      <div>
-        <div class="badge-label">Compte utilisateur</div>
-        <div class="badge-value">Aucun — données locales</div>
-      </div>
-    </div>
-    <div class="compliance-badge">
-      <div class="badge-icon blue">🇪🇺</div>
-      <div>
-        <div class="badge-label">Conformité</div>
-        <div class="badge-value">RGPD — Règl. UE 2016/679</div>
-      </div>
-    </div>
-    <div class="compliance-badge">
-      <div class="badge-icon orange">🔔</div>
-      <div>
-        <div class="badge-label">Publicité</div>
-        <div class="badge-value">Consentement IAB TCF</div>
-      </div>
-    </div>
+  <div class="intro">
+    Skenta collecte uniquement les données strictement nécessaires au fonctionnement du service. Ce document décrit de manière exhaustive la nature des données traitées, leur finalité et vos droits.
   </div>
 
   <!-- 1. RESPONSABLE -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-icon blue">👤</div>
-      <div>
-        <div class="section-title">Responsable du traitement</div>
-        <div class="section-subtitle">Identité et coordonnées — Article 13 RGPD</div>
-      </div>
-    </div>
-    <div class="section-body">
-      <div class="highlight blue">
-        <strong>Application Skenta</strong>
-        Développée et exploitée à titre individuel par Zakaria J., sous le nom commercial <strong>Skenta</strong>.<br>
-        Identifiant Google Play : <code>app.skenta.skenta</code>
-      </div>
-      <div class="highlight gray">
-        <strong>📧 Contact — Responsable du traitement</strong>
-        Pour toute question relative à la protection de vos données personnelles : <a href="mailto:contact@skenta.app">contact@skenta.app</a><br>
-        Délai de réponse garanti : <strong>30 jours</strong>
-      </div>
-    </div>
+  <h2>1. Responsable du traitement</h2>
+  <p>L'application Skenta est développée et exploitée à titre individuel par <strong>Zakaria J.</strong>, sous le nom commercial <strong>Skenta</strong>.</p>
+  <p>Pour toute question relative au traitement de vos données personnelles :</p>
+  <div class="note blue">
+    📧 <a href="mailto:contact@skenta.app">contact@skenta.app</a> — délai de réponse garanti : 30 jours
   </div>
 
   <!-- 2. DONNÉES COLLECTÉES -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-icon blue">📊</div>
-      <div>
-        <div class="section-title">Données collectées et finalités</div>
-        <div class="section-subtitle">Nature, base légale et durée de conservation</div>
-      </div>
-    </div>
-    <div class="section-body">
+  <h2>2. Données collectées et finalités</h2>
 
-      <!-- GPS -->
-      <div class="data-card">
-        <div class="data-card-header">
-          <div class="data-card-title">📍 Localisation GPS</div>
-          <span class="pill pill-green">Premier plan uniquement</span>
-        </div>
-        <div class="data-card-body">
-          <p>Votre position géographique est utilisée pour identifier les stations-service proches de vous et calculer les distances. Elle n'est <strong>jamais stockée</strong> sur nos serveurs.</p>
-          <div class="meta-row">
-            <span class="meta-item">⚖️ Base légale : <strong>Consentement — Art. 6.1.a RGPD</strong></span>
-            <span class="meta-item">🕐 Conservation : <strong>Suppression immédiate après traitement</strong></span>
-            <span class="meta-item">🚫 <strong>Aucun historique</strong> conservé</span>
-          </div>
-          <div class="highlight green" style="margin-top:14px">
-            <strong>Quand ?</strong>
-            Uniquement lorsque vous utilisez activement Skenta (application au premier plan). Skenta n'accède <strong>jamais</strong> à votre localisation en arrière-plan.
-          </div>
-          <div class="highlight gray" style="margin-top:12px">
-            <strong>Partage ?</strong>
-            Votre localisation n'est jamais partagée avec des tiers à des fins publicitaires ou de profilage. Les coordonnées sont transmises uniquement à notre serveur pour la recherche de stations, puis supprimées immédiatement.
-          </div>
-        </div>
-      </div>
+  <h3>📍 Localisation GPS <span class="badge badge-green">Premier plan uniquement</span></h3>
+  <p>Votre position géographique est utilisée pour identifier les stations-service proches et calculer les distances. Elle n'est <strong>jamais stockée</strong> sur nos serveurs.</p>
+  <ul>
+    <li><strong>Base légale :</strong> Consentement — Art. 6.1.a du RGPD</li>
+    <li><strong>Quand :</strong> uniquement lorsque vous utilisez activement Skenta (premier plan)</li>
+    <li><strong>Conservation :</strong> suppression immédiate après traitement — aucun historique</li>
+    <li><strong>Partage :</strong> jamais partagée à des fins publicitaires ou de profilage</li>
+  </ul>
+  <div class="note green">Skenta n'accède jamais à votre localisation en arrière-plan. La permission <code>ACCESS_BACKGROUND_LOCATION</code> n'est pas déclarée.</div>
 
-      <!-- FCM -->
-      <div class="data-card">
-        <div class="data-card-header">
-          <div class="data-card-title">🔔 Token de notification (FCM)</div>
-          <span class="pill pill-blue">Consentement requis</span>
-        </div>
-        <div class="data-card-body">
-          <p>Pour l'envoi d'alertes de prix, l'application utilise <strong>Firebase Cloud Messaging (FCM)</strong>, un service de Google LLC (États-Unis). Un identifiant technique anonyme est généré par votre appareil lors de l'activation des notifications.</p>
-          <div class="meta-row">
-            <span class="meta-item">⚖️ Base légale : <strong>Consentement — Art. 6.1.a RGPD</strong></span>
-            <span class="meta-item">🕐 Conservation : <strong>180 jours d'inactivité</strong></span>
-            <span class="meta-item">🌍 Transfert : <strong>CCT — Art. 46 RGPD</strong></span>
-          </div>
-          <div class="highlight orange" style="margin-top:14px">
-            <strong>Suppression automatique dans les cas suivants :</strong>
-            • Immédiatement lors de la désinstallation<br>
-            • Immédiatement via <em>Paramètres → Effacer mes données</em><br>
-            • Après 180 jours d'inactivité par les serveurs Firebase<br>
-            • Sur demande à <a href="mailto:contact@skenta.app">contact@skenta.app</a>
-          </div>
-          <p style="font-size:13px;color:var(--text-muted);margin-top:10px">Firebase Cloud Messaging est opéré par Google LLC (États-Unis). Le token peut transiter vers des serveurs situés hors de l'Union Européenne, dans le cadre des clauses contractuelles types approuvées par la Commission Européenne (Article 46 du RGPD).</p>
-        </div>
-      </div>
+  <h3>🔔 Token de notification (FCM) <span class="badge badge-blue">Consentement requis</span></h3>
+  <p>Pour l'envoi d'alertes de prix, l'application utilise Firebase Cloud Messaging (FCM), un service de Google LLC. Un identifiant technique anonyme est généré par votre appareil lors de l'activation des notifications.</p>
+  <ul>
+    <li><strong>Base légale :</strong> Consentement — Art. 6.1.a du RGPD</li>
+    <li><strong>Conservation :</strong> 180 jours d'inactivité (serveurs Firebase)</li>
+    <li><strong>Suppression immédiate :</strong> désinstallation de l'app ou <em>Paramètres → Effacer mes données</em></li>
+    <li><strong>Transfert :</strong> États-Unis — clauses contractuelles types Art. 46 RGPD</li>
+  </ul>
 
-      <!-- DONNÉES LOCALES -->
-      <div class="data-card">
-        <div class="data-card-header">
-          <div class="data-card-title">📱 Données stockées localement</div>
-          <span class="pill pill-green">Jamais transmises</span>
-        </div>
-        <div class="data-card-body">
-          <p>Les données suivantes sont conservées <strong>exclusivement sur votre appareil</strong> et ne transitent à aucun moment par nos serveurs :</p>
-          <div class="highlight green">
-            • Véhicules enregistrés (nom, type, carburant, consommation)<br>
-            • Stations favorites<br>
-            • Préférences (carburant par défaut, rayon de recherche, ordre de tri)<br>
-            • Cache des tuiles cartographiques (OpenStreetMap)
-          </div>
-          <p style="font-size:13px;color:var(--text-muted);margin-top:10px">Ces données sont supprimées définitivement lors de la désinstallation de l'application.</p>
-        </div>
-      </div>
+  <h3>📱 Données stockées localement <span class="badge badge-green">Jamais transmises</span></h3>
+  <p>Les données suivantes sont conservées exclusivement sur votre appareil :</p>
+  <ul>
+    <li>Véhicules enregistrés (nom, type, carburant, consommation)</li>
+    <li>Stations favorites</li>
+    <li>Préférences (carburant par défaut, rayon de recherche, ordre de tri)</li>
+    <li>Cache des tuiles cartographiques (OpenStreetMap)</li>
+  </ul>
+  <p>Ces données sont supprimées définitivement lors de la désinstallation.</p>
 
-      <!-- SIGNALEMENTS -->
-      <div class="data-card">
-        <div class="data-card-header">
-          <div class="data-card-title">📝 Signalements de prix</div>
-          <span class="pill pill-gray">Anonymes</span>
-        </div>
-        <div class="data-card-body">
-          <p>Lorsque vous signalez un prix incorrect, les informations suivantes sont transmises à notre serveur :</p>
-          <div class="highlight gray">
-            • L'identifiant de la station, le type de carburant et le prix signalé<br>
-            • Un condensat anonyme (<em>hash non réversible</em>) de votre appareil, uniquement à des fins anti-spam
-          </div>
-          <p>Ces données servent exclusivement à valider la fiabilité des prix par consensus entre utilisateurs. Aucun identifiant personnel n'est associé à un signalement.</p>
-          <div class="meta-row">
-            <span class="meta-item">⚖️ Base légale : <strong>Intérêt légitime — Art. 6.1.f RGPD</strong></span>
-            <span class="meta-item">🕐 Conservation : <strong>12 mois glissants</strong></span>
-            <span class="meta-item">🗑️ Purge automatique : <strong>mensuelle</strong></span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
+  <h3>📝 Signalements de prix <span class="badge badge-gray">Anonymes</span></h3>
+  <p>Lorsque vous signalez un prix incorrect, les informations suivantes sont transmises :</p>
+  <ul>
+    <li>L'identifiant de la station, le type de carburant et le prix signalé</li>
+    <li>Un condensat anonyme (hash non réversible) de votre appareil — uniquement à des fins anti-spam</li>
+  </ul>
+  <ul>
+    <li><strong>Base légale :</strong> Intérêt légitime — Art. 6.1.f du RGPD</li>
+    <li><strong>Conservation :</strong> 12 mois glissants — purge automatique mensuelle</li>
+  </ul>
 
   <!-- 3. PUBLICITÉ -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-icon orange">📢</div>
-      <div>
-        <div class="section-title">Publicité</div>
-        <div class="section-subtitle">Google AdMob — IAB TCF conforme</div>
-      </div>
-    </div>
-    <div class="section-body">
-      <p style="margin-bottom:16px">Skenta est une application gratuite financée par la publicité. Nous utilisons <strong>Google AdMob</strong>, opéré par Google LLC (États-Unis), pour diffuser des annonces.</p>
-
-      <div class="highlight blue">
-        <strong>⚖️ Base légale : Consentement — Art. 6.1.a RGPD</strong>
-        Un formulaire de consentement conforme IAB TCF v2.2 est présenté au premier lancement. Votre consentement est requis avant tout chargement publicitaire.
-      </div>
-
-      <div class="highlight orange" style="margin-top:12px">
-        <strong>En cas de refus du consentement</strong>
-        Seules des publicités <strong>non personnalisées</strong> sont diffusées. L'identifiant publicitaire Android (GAID) n'est pas utilisé. Aucune donnée de profilage n'est transmise à Google.
-      </div>
-
-      <div class="meta-row" style="margin-top:16px">
-        <span class="meta-item">🌍 Transfert : <strong>CCT — Art. 46 RGPD</strong></span>
-        <span class="meta-item">⚙️ Gérer via : <strong>Paramètres → Préférences publicitaires</strong></span>
-      </div>
-    </div>
-  </div>
+  <h2>3. Publicité</h2>
+  <p>Skenta est une application gratuite financée par la publicité. Nous utilisons <strong>Google AdMob</strong> (Google LLC, États-Unis).</p>
+  <ul>
+    <li><strong>Base légale :</strong> Consentement — Art. 6.1.a du RGPD (formulaire IAB TCF v2.2 au premier lancement)</li>
+    <li><strong>En cas de refus :</strong> seules des publicités non personnalisées sont diffusées — l'identifiant publicitaire Android (GAID) n'est pas utilisé</li>
+    <li><strong>Transfert :</strong> États-Unis — clauses contractuelles types Art. 46 RGPD</li>
+  </ul>
+  <div class="note">Gérer vos préférences à tout moment : <em>Paramètres → Gérer mes préférences publicitaires</em></div>
 
   <!-- 4. SOUS-TRAITANTS -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-icon blue">🤝</div>
-      <div>
-        <div class="section-title">Sous-traitants</div>
-        <div class="section-subtitle">Services tiers — Article 28 RGPD</div>
-      </div>
-    </div>
-    <div class="section-body">
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Service</th>
-              <th>Fournisseur</th>
-              <th>Finalité</th>
-              <th>Localisation</th>
-              <th>Garantie</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Google AdMob</strong></td>
-              <td>Google LLC</td>
-              <td>Diffusion de publicités</td>
-              <td>États-Unis</td>
-              <td><span class="pill pill-blue">CCT Art. 46</span></td>
-            </tr>
-            <tr>
-              <td><strong>Firebase Cloud Messaging</strong></td>
-              <td>Google LLC</td>
-              <td>Notifications push</td>
-              <td>États-Unis</td>
-              <td><span class="pill pill-blue">CCT Art. 46</span></td>
-            </tr>
-            <tr>
-              <td><strong>OpenStreetMap</strong></td>
-              <td>OSMF (UK)</td>
-              <td>Tuiles cartographiques</td>
-              <td>Europe</td>
-              <td><span class="pill pill-green">UE</span></td>
-            </tr>
-            <tr>
-              <td><strong>Serveur API Skenta</strong></td>
-              <td>Hetzner Online GmbH</td>
-              <td>Données prix carburant</td>
-              <td>Allemagne (UE)</td>
-              <td><span class="pill pill-green">UE — RGPD</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p style="font-size:13px;color:var(--text-muted);margin-top:14px">Les transferts vers Google LLC sont encadrés par les clauses contractuelles types (CCT) adoptées par la Commission Européenne, conformément à l'Article 46 du RGPD.</p>
-    </div>
+  <h2>4. Sous-traitants</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Service</th>
+          <th>Fournisseur</th>
+          <th>Finalité</th>
+          <th>Localisation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Google AdMob</td>
+          <td>Google LLC</td>
+          <td>Publicités</td>
+          <td>États-Unis (CCT)</td>
+        </tr>
+        <tr>
+          <td>Firebase Cloud Messaging</td>
+          <td>Google LLC</td>
+          <td>Notifications push</td>
+          <td>États-Unis (CCT)</td>
+        </tr>
+        <tr>
+          <td>OpenStreetMap</td>
+          <td>OSMF</td>
+          <td>Tuiles cartographiques</td>
+          <td>Europe</td>
+        </tr>
+        <tr>
+          <td>API Skenta</td>
+          <td>Hetzner Online GmbH</td>
+          <td>Données prix carburant</td>
+          <td>Allemagne (UE)</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
   <!-- 5. SÉCURITÉ -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-icon green">🔐</div>
-      <div>
-        <div class="section-title">Sécurité des données</div>
-        <div class="section-subtitle">Mesures techniques et organisationnelles</div>
-      </div>
-    </div>
-    <div class="section-body">
-      <div class="data-card">
-        <div class="data-card-header">
-          <div class="data-card-title">Chiffrement des transmissions</div>
-          <span class="pill pill-green">HTTPS / TLS 1.2+</span>
-        </div>
-        <div class="data-card-body">
-          <p>Toutes les transmissions de données entre Skenta et nos serveurs sont chiffrées via le protocole HTTPS (Transport Layer Security — TLS 1.2 ou supérieur). Vos données ne sont jamais transmises en clair sur le réseau.</p>
-          <p style="color:var(--text-muted);font-size:13px">Les données sensibles (localisation, token FCM) sont supprimées des serveurs dès que le traitement est terminé. Bien que nous prenions toutes les mesures raisonnables pour sécuriser vos données, aucune transmission par Internet n'est garantie à 100 % sécurisée.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+  <h2>5. Sécurité des données</h2>
+  <p>Toutes les transmissions entre Skenta et nos serveurs sont chiffrées via HTTPS (TLS 1.2+). Les données sensibles (localisation, token FCM) sont supprimées dès que le traitement est terminé.</p>
 
   <!-- 6. DURÉES DE CONSERVATION -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-icon blue">🕐</div>
-      <div>
-        <div class="section-title">Durées de conservation</div>
-        <div class="section-subtitle">Rétention des données — Article 5.1.e RGPD</div>
-      </div>
-    </div>
-    <div class="section-body">
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Donnée</th>
-              <th>Durée</th>
-              <th>Suppression</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Token FCM</strong></td>
-              <td>180 jours d'inactivité (Firebase)</td>
-              <td>Immédiat à la désinstallation, ou sur demande</td>
-            </tr>
-            <tr>
-              <td><strong>Alertes de prix</strong></td>
-              <td>90 jours</td>
-              <td>Expiration automatique</td>
-            </tr>
-            <tr>
-              <td><strong>Signalements de prix</strong></td>
-              <td><strong>12 mois glissants</strong></td>
-              <td>Purge automatique mensuelle (données anonymes)</td>
-            </tr>
-            <tr>
-              <td><strong>Données locales</strong> (véhicules, favoris)</td>
-              <td>Durée d'utilisation de l'app</td>
-              <td>Désinstallation de l'application</td>
-            </tr>
-            <tr>
-              <td><strong>Coordonnées GPS</strong></td>
-              <td>Non conservées</td>
-              <td>Suppression immédiate après traitement</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+  <h2>6. Durées de conservation</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Donnée</th>
+          <th>Durée</th>
+          <th>Suppression</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Token FCM</td>
+          <td>180 jours d'inactivité</td>
+          <td>Immédiat à la désinstallation ou sur demande</td>
+        </tr>
+        <tr>
+          <td>Alertes de prix</td>
+          <td>90 jours</td>
+          <td>Expiration automatique</td>
+        </tr>
+        <tr>
+          <td>Signalements de prix</td>
+          <td>12 mois glissants</td>
+          <td>Purge automatique mensuelle</td>
+        </tr>
+        <tr>
+          <td>Données locales</td>
+          <td>Durée d'utilisation</td>
+          <td>Désinstallation</td>
+        </tr>
+        <tr>
+          <td>Coordonnées GPS</td>
+          <td>Non conservées</td>
+          <td>Suppression immédiate</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
   <!-- 7. VOS DROITS -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-icon green">⚖️</div>
-      <div>
-        <div class="section-title">Vos droits</div>
-        <div class="section-subtitle">Articles 15 à 22 du RGPD</div>
-      </div>
-    </div>
-    <div class="section-body">
-      <div class="highlight blue" style="margin-bottom:20px">
-        Skenta ne collecte aucune donnée personnelle identifiable (nom, email, compte utilisateur). Les seules données liées à votre appareil sont le token FCM (anonyme, si vous activez les notifications) et les signalements de prix (anonymes).
-      </div>
-
-      <ul class="rights-list">
-        <li>
-          <div class="rights-icon">🗑️</div>
-          <div>
-            <strong>Suppression des données locales</strong>
-            <span>Depuis l'application : <em>Paramètres → Effacer mes données</em></span>
-          </div>
-        </li>
-        <li>
-          <div class="rights-icon">📧</div>
-          <div>
-            <strong>Suppression du token FCM</strong>
-            <span>Envoyez un e-mail à <a href="mailto:contact@skenta.app">contact@skenta.app</a> avec le sujet <em>« Demande de suppression de données »</em>. Traitement dans un délai de 30 jours.</span>
-          </div>
-        </li>
-        <li>
-          <div class="rights-icon">⚙️</div>
-          <div>
-            <strong>Retrait du consentement publicitaire</strong>
-            <span>Via <em>Paramètres → Gérer mes préférences publicitaires</em> à tout moment. Prend effet immédiatement.</span>
-          </div>
-        </li>
-        <li>
-          <div class="rights-icon">🏛️</div>
-          <div>
-            <strong>Réclamation auprès de la CNIL</strong>
-            <span>Vous pouvez déposer une réclamation auprès de l'autorité de contrôle française : <a href="https://www.cnil.fr" target="_blank" rel="noopener">cnil.fr</a></span>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
+  <h2>7. Vos droits</h2>
+  <p>Skenta ne collecte aucune donnée personnelle identifiable (pas de nom, email, ni compte utilisateur). Pour les données liées à votre appareil :</p>
+  <ul>
+    <li><strong>Suppression des données locales :</strong> <em>Paramètres → Effacer mes données</em></li>
+    <li><strong>Suppression du token FCM :</strong> <a href="mailto:contact@skenta.app">contact@skenta.app</a> — objet « Demande de suppression de données » — traitement sous 30 jours</li>
+    <li><strong>Retrait du consentement publicitaire :</strong> <em>Paramètres → Gérer mes préférences publicitaires</em></li>
+    <li><strong>Réclamation CNIL :</strong> <a href="https://www.cnil.fr" target="_blank" rel="noopener">cnil.fr</a></li>
+  </ul>
 
   <!-- 8. MINEURS -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-icon orange">👶</div>
-      <div>
-        <div class="section-title">Protection des mineurs</div>
-        <div class="section-subtitle">Utilisateurs de moins de 16 ans</div>
-      </div>
-    </div>
-    <div class="section-body">
-      <div class="highlight orange">
-        Skenta n'est pas destinée aux personnes de moins de <strong>16 ans</strong> et ne collecte pas sciemment de données les concernant. Si vous êtes le représentant légal d'un mineur et pensez que celui-ci a utilisé l'application, veuillez nous contacter à <a href="mailto:contact@skenta.app">contact@skenta.app</a> afin que nous procédions à la suppression des données associées.
-      </div>
-    </div>
-  </div>
+  <h2>8. Protection des mineurs</h2>
+  <div class="note orange">Skenta n'est pas destinée aux personnes de moins de 16 ans et ne collecte pas sciemment de données les concernant. Contact : <a href="mailto:contact@skenta.app" style="color:inherit">contact@skenta.app</a></div>
 
-  <!-- 9. GOOGLE PLAY -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-icon green">🏪</div>
-      <div>
-        <div class="section-title">Déclaration de conformité Google Play</div>
-        <div class="section-subtitle">Data Safety Form — Play Store</div>
-      </div>
-    </div>
-    <div class="section-body">
-      <ul class="rights-list">
-        <li>
-          <div class="rights-icon">✅</div>
-          <div>
-            <strong>Responsable du traitement identifié</strong>
-            <span>Nom commercial Skenta — Zakaria J. — contact@skenta.app</span>
-          </div>
-        </li>
-        <li>
-          <div class="rights-icon">✅</div>
-          <div>
-            <strong>Données collectées et finalités exhaustives</strong>
-            <span>Localisation (foreground), FCM token, signalements anonymes, données locales</span>
-          </div>
-        </li>
-        <li>
-          <div class="rights-icon">✅</div>
-          <div>
-            <strong>Transferts vers des tiers encadrés</strong>
-            <span>Google LLC — clauses contractuelles types Art. 46 RGPD</span>
-          </div>
-        </li>
-        <li>
-          <div class="rights-icon">✅</div>
-          <div>
-            <strong>Droits utilisateurs</strong>
-            <span>Accès, rectification, suppression (Art. 15-17), retrait consentement (Art. 7), réclamation CNIL (Art. 77)</span>
-          </div>
-        </li>
-        <li>
-          <div class="rights-icon">✅</div>
-          <div>
-            <strong>Localisation premier plan uniquement</strong>
-            <span>Aucun tracking arrière-plan — ACCESS_BACKGROUND_LOCATION non déclaré</span>
-          </div>
-        </li>
-        <li>
-          <div class="rights-icon">✅</div>
-          <div>
-            <strong>Aucun compte utilisateur</strong>
-            <span>Toutes les données personnalisées restent sur l'appareil — désinstallation = suppression complète</span>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
+  <!-- 9. MODIFICATIONS -->
+  <h2>9. Modifications de la présente politique</h2>
+  <p>En cas de modification substantielle, une notification sera affichée dans l'application et, si le changement concerne un traitement basé sur le consentement, votre consentement actif sera à nouveau sollicité.</p>
 
-  <!-- 10. MODIFICATIONS -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-icon blue">📋</div>
-      <div>
-        <div class="section-title">Modifications de la présente politique</div>
-        <div class="section-subtitle">Notification des changements</div>
-      </div>
-    </div>
-    <div class="section-body">
-      <p>Nous nous réservons le droit de modifier cette politique de confidentialité afin de refléter les évolutions de l'application ou des obligations légales applicables.</p>
-      <div class="highlight blue" style="margin-top:14px">
-        <strong>En cas de modification substantielle</strong>
-        Une notification sera affichée dans l'application et, si le changement concerne un traitement basé sur le consentement, votre consentement actif sera à nouveau sollicité. La date de dernière mise à jour est indiquée en haut de cette page.
-      </div>
-    </div>
-  </div>
-
-  <!-- CONTACT CARD -->
-  <div class="contact-card">
-    <h3>Exercer vos droits</h3>
-    <p>Pour toute demande relative à la protection de vos données personnelles, notre équipe s'engage à vous répondre dans un délai de <strong>30 jours</strong>.</p>
+  <div class="contact-block">
+    <p>Pour toute demande relative à la protection de vos données, réponse garantie sous 30 jours.</p>
     <a class="contact-btn" href="mailto:contact@skenta.app">contact@skenta.app</a>
   </div>
 
 </div>
 
-<!-- FOOTER -->
 <footer>
-  <p>Skenta — Politique de confidentialité conforme au Règlement Général sur la Protection des Données<br>(RGPD — Règlement UE 2016/679)</p>
-  <p style="margin-top:8px"><a href="https://www.skenta.app">skenta.app</a> · <a href="https://www.cnil.fr" target="_blank" rel="noopener">cnil.fr</a></p>
+  Skenta — Politique de confidentialité conforme au RGPD (Règlement UE 2016/679)
 </footer>
 
 </body>
