@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -285,7 +286,7 @@
 <div class="hero">
   <h1>Politique de confidentialité</h1>
   <p>Skenta collecte uniquement les données strictement nécessaires au fonctionnement du service. Ce document décrit de manière exhaustive la nature des données traitées, leur finalité et vos droits.</p>
-  <div class="date">Dernière mise à jour : 1 mai 2026 — v1.2</div>
+  <div class="date">Dernière mise à jour : 15 mai 2026 — v1.3</div>
 </div>
 
 <!-- CONTENT -->
@@ -321,7 +322,7 @@
     <div class="list">
       <div class="list-item">
         <div class="list-item-marker"></div>
-        <p><strong>Base légale :</strong> Intérêt légitime — fourniture d'un service de proximité (Article 6.1.f du RGPD)</p>
+        <p><strong>Base légale :</strong> Consentement — permission explicite demandée à l'installation (Article 6.1.a du RGPD)</p>
       </div>
       <div class="list-item">
         <div class="list-item-marker"></div>
@@ -416,6 +417,58 @@
       </div>
     </div>
     <p style="margin-top:12px;">Ces données servent exclusivement à valider la fiabilité des prix par consensus entre utilisateurs. Aucun identifiant personnel n'est associé à un signalement.</p>
+    <div class="notice notice-green">
+      <p><strong>Durée de conservation :</strong> 12 mois glissants — purge automatique mensuelle (données anonymes).</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Identifiant Android (Android ID) — Rate limiting</h2>
+    <p>Un identifiant technique propre à votre appareil est utilisé pour limiter le nombre de calculs d'itinéraire gratuits par jour (3 calculs/jour en version gratuite). Cet identifiant n'est jamais associé à votre identité et ne permet pas de vous identifier personnellement.</p>
+    <div class="list">
+      <div class="list-item">
+        <div class="list-item-marker"></div>
+        <p><strong>Base légale :</strong> Intérêt légitime — protection contre les abus et équité d'accès au service (Article 6.1.f du RGPD)</p>
+      </div>
+      <div class="list-item">
+        <div class="list-item-marker orange"></div>
+        <p><strong>Durée de conservation :</strong> 24 heures — les compteurs sont réinitialisés chaque jour automatiquement</p>
+      </div>
+      <div class="list-item">
+        <div class="list-item-marker green"></div>
+        <p><strong>Partage ?</strong> Cet identifiant n'est jamais partagé avec des tiers ni utilisé à des fins publicitaires.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Adresse e-mail Google — Essai Premium via vidéo récompensée</h2>
+    <p>Si vous choisissez de débloquer un essai gratuit de 30 jours Premium en regardant des vidéos récompensées, vous devez vous connecter avec votre compte Google. Dans ce cas, votre adresse e-mail est utilisée pour vérifier que l'essai gratuit n'a pas déjà été utilisé (une seule utilisation par compte).</p>
+    <div class="list">
+      <div class="list-item">
+        <div class="list-item-marker"></div>
+        <p><strong>Base légale :</strong> Consentement — la connexion Google est volontaire et explicite (Article 6.1.a du RGPD)</p>
+      </div>
+      <div class="list-item">
+        <div class="list-item-marker orange"></div>
+        <p><strong>Traitement :</strong> Votre adresse e-mail est transformée en un condensat cryptographique non réversible (SHA-256) avant d'être stockée. L'adresse brute n'est jamais enregistrée sur nos serveurs.</p>
+      </div>
+      <div class="list-item">
+        <div class="list-item-marker orange"></div>
+        <p><strong>Durée de conservation :</strong> 2 ans maximum — uniquement le hash anonyme</p>
+      </div>
+      <div class="list-item">
+        <div class="list-item-marker green"></div>
+        <p><strong>Partage ?</strong> Ce hash n'est jamais partagé avec des tiers.</p>
+      </div>
+      <div class="list-item">
+        <div class="list-item-marker green"></div>
+        <p><strong>Cette fonctionnalité est entièrement optionnelle.</strong> L'utilisation de Skenta en version gratuite ne nécessite aucune connexion à un compte Google.</p>
+      </div>
+    </div>
+    <div class="notice notice-amber">
+      <p>Google Sign-In est opéré par Google LLC (États-Unis). Les données de connexion transitent via les serveurs de Google dans le cadre des clauses contractuelles types de la Commission Européenne (Article 46 du RGPD). Politique de confidentialité Google : <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></p>
+    </div>
   </div>
 
   <!-- 3. Publicité -->
@@ -424,15 +477,14 @@
   <div class="card">
     <h2>Google AdMob</h2>
     <p>Skenta est une application gratuite financée par la publicité. Nous utilisons Google AdMob, un service publicitaire opéré par Google LLC (États-Unis), pour diffuser des annonces.</p>
-
     <div class="list" style="margin-top:4px;">
       <div class="list-item">
         <div class="list-item-marker"></div>
-        <p><strong>Base légale :</strong> Consentement — un formulaire de consentement conforme IAB TCF est présenté au premier lancement (Article 6.1.a du RGPD)</p>
+        <p><strong>Base légale :</strong> Consentement — un formulaire de consentement conforme IAB TCF v2.2 est présenté au premier lancement (Article 6.1.a du RGPD)</p>
       </div>
       <div class="list-item">
-        <div class="list-item-marker orange"></div>
-        <p>Google AdMob peut utiliser l'identifiant publicitaire Android (GAID) pour personnaliser les annonces, sous réserve de votre consentement.</p>
+        <div class="list-item-marker green"></div>
+        <p><strong>En cas de refus :</strong> seules des publicités non personnalisées sont diffusées — l'identifiant publicitaire Android (GAID) n'est pas utilisé.</p>
       </div>
       <div class="list-item">
         <div class="list-item-marker orange"></div>
@@ -445,7 +497,7 @@
     </div>
   </div>
 
-  <!-- 3b. Sécurité -->
+  <!-- 4. Sécurité -->
   <div class="section-label">Sécurité des données</div>
 
   <div class="card">
@@ -467,7 +519,7 @@
     </div>
   </div>
 
-  <!-- 4. Sous-traitants -->
+  <!-- 5. Sous-traitants -->
   <div class="section-label">Sous-traitants</div>
 
   <div class="card">
@@ -485,38 +537,58 @@
           <td>Google AdMob</td>
           <td>Google LLC</td>
           <td>Diffusion de publicités</td>
-          <td>États-Unis</td>
+          <td>États-Unis (CCT)</td>
         </tr>
         <tr>
           <td>Firebase Cloud Messaging</td>
           <td>Google LLC</td>
           <td>Notifications push</td>
-          <td>États-Unis</td>
+          <td>États-Unis (CCT)</td>
+        </tr>
+        <tr>
+          <td>OpenStreetMap</td>
+          <td>OSMF</td>
+          <td>Tuiles cartographiques</td>
+          <td>Europe</td>
+        </tr>
+        <tr>
+          <td>Google Sign-In</td>
+          <td>Google LLC</td>
+          <td>Authentification essai Premium (optionnel)</td>
+          <td>États-Unis (CCT)</td>
+        </tr>
+        <tr>
+          <td>Firebase Analytics / Crashlytics</td>
+          <td>Google LLC</td>
+          <td>Statistiques anonymes + rapports de crash</td>
+          <td>États-Unis (CCT)</td>
+        </tr>
+        <tr>
+          <td>API Skenta</td>
+          <td>Hetzner Online GmbH</td>
+          <td>Données prix carburant</td>
+          <td>Allemagne (UE)</td>
         </tr>
       </table>
     </div>
     <p style="margin-top:14px; font-size:13px; color:#64748B;">Les transferts de données vers Google LLC sont encadrés par les clauses contractuelles types (CCT) adoptées par la Commission Européenne, conformément à l'Article 46 du RGPD.</p>
   </div>
 
-  <!-- 5. Droits -->
+  <!-- 6. Vos droits -->
   <div class="section-label">Vos droits</div>
 
   <div class="card">
     <h2>Vos droits</h2>
-    <p>Skenta ne collecte aucune donnée personnelle identifiable (nom, email, compte utilisateur). Les seules données liées à votre appareil sont le token FCM (anonyme, si vous activez les notifications) et les signalements de prix (anonymes).</p>
+    <p>Skenta collecte un minimum de données : un token FCM anonyme (si vous activez les notifications), des signalements de prix anonymes, un identifiant appareil pour le rate limiting, et optionnellement un hash de votre e-mail Google si vous utilisez l'essai Premium via vidéo récompensée. Aucun nom, prénom ou compte utilisateur permanent n'est créé.</p>
     <p>Pour ces données, vous disposez des droits suivants :</p>
     <div class="list">
-      <div class="list-item">
-        <div class="list-item-marker"></div>
-        <p><strong>Suppression du token FCM et des données :</strong></p>
-      </div>
       <div class="list-item">
         <div class="list-item-marker green"></div>
         <p><strong>Depuis l'application :</strong> <em>Paramètres &rarr; Effacer mes données</em></p>
       </div>
       <div class="list-item" id="supprimer-vos-donnees">
         <div class="list-item-marker green"></div>
-        <p><strong>Après désinstallation :</strong> Envoyez un e-mail à <a href="mailto:contact@skenta.app?subject=Demande%20de%20suppression%20de%20donn%C3%A9es">contact@skenta.app</a> avec le sujet <em>"Demande de suppression de données"</em>. Nous traiterons votre demande dans les meilleurs délais (au plus tard sous 30 jours conformément au RGPD). Aucune information personnelle n'est requise — le token FCM et les signalements sont anonymes.</p>
+        <p><strong>Suppression du token FCM :</strong> Envoyez un e-mail à <a href="mailto:contact@skenta.app?subject=Demande%20de%20suppression%20de%20donn%C3%A9es">contact@skenta.app</a> avec le sujet <em>"Demande de suppression de données"</em>. Traitement dans les meilleurs délais (au plus tard sous 30 jours, conformément au RGPD).</p>
       </div>
       <div class="list-item">
         <div class="list-item-marker"></div>
@@ -533,7 +605,7 @@
     </div>
   </div>
 
-  <!-- 6. Conservation -->
+  <!-- 7. Conservation -->
   <div class="section-label">Durées de conservation</div>
 
   <div class="card">
@@ -557,8 +629,8 @@
         </tr>
         <tr>
           <td>Signalements de prix</td>
-          <td>Durée indéterminée (anonymes)</td>
-          <td>Sur demande</td>
+          <td>12 mois glissants</td>
+          <td>Purge automatique mensuelle</td>
         </tr>
         <tr>
           <td>Données locales (véhicules, favoris)</td>
@@ -570,11 +642,21 @@
           <td>Non conservées</td>
           <td>Suppression immédiate après traitement</td>
         </tr>
+        <tr>
+          <td>Android ID (rate limiting)</td>
+          <td>24 heures</td>
+          <td>Réinitialisation automatique quotidienne</td>
+        </tr>
+        <tr>
+          <td>Hash e-mail Google (trial Premium)</td>
+          <td>2 ans maximum</td>
+          <td>Sur demande à contact@skenta.app</td>
+        </tr>
       </table>
     </div>
   </div>
 
-  <!-- 7. Mineurs -->
+  <!-- 8. Dispositions particulières -->
   <div class="section-label">Dispositions particulières</div>
 
   <div class="card">
@@ -582,14 +664,13 @@
     <p>Skenta n'est pas destinée aux personnes de moins de 16 ans et ne collecte pas sciemment de données les concernant. Si vous êtes le représentant légal d'un mineur et pensez que celui-ci a utilisé l'application, veuillez nous contacter à <a href="mailto:contact@skenta.app">contact@skenta.app</a> afin que nous procédions à la suppression des données associées.</p>
   </div>
 
-  <!-- Conformité Google Play -->
   <div class="card">
     <h2>Déclaration de conformité Google Play</h2>
     <p>Cette politique de confidentialité satisfait aux exigences du Google Play Store :</p>
     <div class="list">
       <div class="list-item">
         <div class="list-item-marker green"></div>
-        <p>Identification claire du responsable du traitement</p>
+        <p>Identification claire du responsable du traitement (ZeroLagLAB — contact@skenta.app)</p>
       </div>
       <div class="list-item">
         <div class="list-item-marker green"></div>
@@ -617,14 +698,14 @@
       </div>
     </div>
     <div class="notice notice-green">
-      <p>Skenta ne dispose pas de système de compte utilisateur. Toutes les données sont liées à l'appareil uniquement. La désinstallation entraîne la suppression complète de toutes les données dans un délai maximum de 180 jours.</p>
+      <p>Skenta ne dispose pas de système de compte utilisateur permanent. La connexion Google (optionnelle, pour l'essai Premium) ne crée aucun profil stocké — seul un hash non réversible est conservé pendant 2 ans maximum. La désinstallation entraîne la suppression de toutes les données locales et des tokens FCM dans un délai maximum de 180 jours.</p>
     </div>
   </div>
 
   <div class="card">
     <h2>Modifications de la présente politique</h2>
-    <p>Nous nous réservons le droit de modifier cette politique de confidentialité afin de refléter les évolutions de l'application ou des obligations légales applicables. En cas de modification substantielle, une notification sera affichée dans l'application.</p>
-    <p>La date de dernière mise à jour est indiquée en haut de cette page. La poursuite de l'utilisation de l'application après modification vaut acceptation de la politique mise à jour.</p>
+    <p>Nous nous réservons le droit de modifier cette politique de confidentialité afin de refléter les évolutions de l'application ou des obligations légales applicables. En cas de modification substantielle, une notification sera affichée dans l'application et, si le changement concerne un traitement basé sur le consentement, votre consentement actif sera à nouveau sollicité.</p>
+    <p>La date de dernière mise à jour est indiquée en haut de cette page.</p>
   </div>
 
   <!-- Contact -->
@@ -639,6 +720,7 @@
 <!-- FOOTER -->
 <footer>
   <p>Skenta &mdash; Politique de confidentialité conforme au Règlement Général sur la Protection des Données (RGPD &mdash; Règlement UE 2016/679)</p>
+  <p style="margin-top:6px;"><a href="https://www.cnil.fr" target="_blank" rel="noopener">cnil.fr</a></p>
 </footer>
 
 </body>
