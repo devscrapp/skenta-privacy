@@ -286,7 +286,7 @@
 <div class="hero">
   <h1>Politique de confidentialité</h1>
   <p>Skenta collecte uniquement les données strictement nécessaires au fonctionnement du service. Ce document décrit de manière exhaustive la nature des données traitées, leur finalité et vos droits.</p>
-  <div class="date">Dernière mise à jour : 15 mai 2026 — v1.3</div>
+  <div class="date">Dernière mise à jour : 26 mai 2026 — v1.5</div>
 </div>
 
 <!-- CONTENT -->
@@ -330,7 +330,7 @@
       </div>
       <div class="list-item">
         <div class="list-item-marker green"></div>
-        <p><strong>Comment ?</strong> Les coordonnées GPS sont transmises à notre serveur pour la recherche de stations proches, puis supprimées immédiatement. Aucun historique de localisation n'est conservé.</p>
+        <p><strong>Comment ?</strong> Les coordonnées GPS sont transmises à notre serveur uniquement pour calculer la réponse à votre requête (recherche de stations proches, calcul d'itinéraire), puis ne sont conservées dans aucune table ni journal applicatif. Aucun historique de localisation n'est constitué.</p>
       </div>
       <div class="list-item">
         <div class="list-item-marker green"></div>
@@ -341,7 +341,7 @@
 
   <div class="card">
     <h2>Token de notification (FCM)</h2>
-    <p>Pour l'envoi d'alertes de prix, l'application utilise Firebase Cloud Messaging (FCM), un service de Google LLC. Un identifiant technique anonyme est généré par votre appareil lors de l'activation des notifications.</p>
+    <p>Pour l'envoi d'alertes de prix, l'application utilise Firebase Cloud Messaging (FCM), un service de Google LLC. Un identifiant technique anonyme (« token FCM ») est généré par votre appareil et transmis à nos serveurs pour pouvoir vous envoyer une notification lorsqu'une alerte de prix se déclenche.</p>
     <div class="list">
       <div class="list-item">
         <div class="list-item-marker"></div>
@@ -353,23 +353,7 @@
       </div>
       <div class="list-item">
         <div class="list-item-marker orange"></div>
-        <p><strong>Durée de conservation :</strong> Le token est supprimé automatiquement dans les cas suivants :</p>
-      </div>
-      <div class="list-item">
-        <div class="list-item-marker green"></div>
-        <p><strong>Immédiatement</strong> lors de la désinstallation de l'application</p>
-      </div>
-      <div class="list-item">
-        <div class="list-item-marker green"></div>
-        <p><strong>Immédiatement</strong> via <em>Paramètres &rarr; Effacer mes données</em></p>
-      </div>
-      <div class="list-item">
-        <div class="list-item-marker orange"></div>
-        <p><strong>Après 180 jours</strong> par les serveurs Firebase en cas d'inactivité</p>
-      </div>
-      <div class="list-item">
-        <div class="list-item-marker green"></div>
-        <p>Vous pouvez demander la suppression manuelle du token à tout moment via <a href="mailto:contact@skenta.app">contact@skenta.app</a>.</p>
+        <p><strong>Durée de conservation :</strong> la copie locale du token est supprimée via <em>Paramètres &rarr; Effacer les données locales</em> ou à la désinstallation. La copie côté serveur Skenta peut subsister jusqu'à votre demande à <a href="mailto:contact@skenta.app">contact@skenta.app</a>. Firebase invalide automatiquement le token après 180 jours d'inactivité.</p>
       </div>
     </div>
     <div class="notice notice-amber">
@@ -378,12 +362,43 @@
   </div>
 
   <div class="card">
+    <h2>Alertes de prix</h2>
+    <p>Lorsque vous créez une alerte de prix, les informations nécessaires à son déclenchement sont transmises et conservées sur nos serveurs :</p>
+    <div class="list">
+      <div class="list-item">
+        <div class="list-item-marker"></div>
+        <p><strong>Base légale :</strong> Exécution du service demandé (Article 6.1.b du RGPD)</p>
+      </div>
+      <div class="list-item">
+        <div class="list-item-marker"></div>
+        <p>Votre identifiant d'installation, le carburant surveillé et le seuil de prix</p>
+      </div>
+      <div class="list-item">
+        <div class="list-item-marker"></div>
+        <p>Pour une alerte sur une station favorite : l'identifiant de la station</p>
+      </div>
+      <div class="list-item">
+        <div class="list-item-marker"></div>
+        <p>Pour une alerte « autour de ma position » : votre latitude, votre longitude et le rayon de recherche choisi. Ces coordonnées sont nécessaires pendant toute la durée de l'alerte pour pouvoir vérifier les prix dans la zone définie.</p>
+      </div>
+      <div class="list-item">
+        <div class="list-item-marker orange"></div>
+        <p><strong>Durée de conservation :</strong> 90 jours à compter de la création (expiration automatique). Vous pouvez supprimer une alerte à tout moment depuis l'écran « Alertes », ou toutes vos alertes en une fois via <em>Paramètres &rarr; Supprimer toutes mes alertes</em>.</p>
+      </div>
+      <div class="list-item">
+        <div class="list-item-marker green"></div>
+        <p><strong>Important :</strong> <em>Effacer les données locales</em> ne supprime pas vos alertes côté serveur. Pour les effacer, utilisez l'action dédiée ci-dessus.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
     <h2>Données stockées localement sur votre appareil</h2>
-    <p>Les données suivantes sont conservées exclusivement sur votre appareil et ne transitent à aucun moment par nos serveurs :</p>
+    <p>Les données suivantes sont conservées sur votre appareil. Elles ne sont pas envoyées à nos serveurs dans le cadre du fonctionnement normal de l'application — sauf exception explicitement signalée ci-dessous.</p>
     <div class="list">
       <div class="list-item">
         <div class="list-item-marker green"></div>
-        <p>Véhicules enregistrés (nom, type, carburant, consommation moyenne)</p>
+        <p>Véhicules enregistrés (nom, type, carburant, consommation moyenne, capacité du réservoir, niveau)</p>
       </div>
       <div class="list-item">
         <div class="list-item-marker green"></div>
@@ -398,8 +413,8 @@
         <p>Cache des tuiles cartographiques (OpenStreetMap)</p>
       </div>
     </div>
-    <div class="notice notice-green">
-      <p>Ces données sont supprimées définitivement lors de la désinstallation de l'application.</p>
+    <div class="notice notice-amber">
+      <p><strong>Exception :</strong> les caractéristiques du véhicule actif (type de carburant, consommation, capacité du réservoir, niveau) sont transmises ponctuellement à nos serveurs uniquement lorsque vous lancez un calcul d'itinéraire. Voir la section <em>Calcul d'itinéraire</em> ci-dessous.</p>
     </div>
   </div>
 
@@ -413,37 +428,57 @@
       </div>
       <div class="list-item">
         <div class="list-item-marker"></div>
-        <p>Un condensat anonyme (hash non réversible) de votre appareil, utilisé uniquement à des fins anti-spam</p>
+        <p>Un condensat anonyme (hash non réversible) de votre adresse IP au moment de l'envoi, utilisé uniquement à des fins anti-spam. Aucun identifiant d'appareil n'est calculé ni transmis pour les signalements.</p>
       </div>
     </div>
     <p style="margin-top:12px;">Ces données servent exclusivement à valider la fiabilité des prix par consensus entre utilisateurs. Aucun identifiant personnel n'est associé à un signalement.</p>
     <div class="notice notice-green">
-      <p><strong>Durée de conservation :</strong> 12 mois glissants — purge automatique mensuelle (données anonymes).</p>
+      <p><strong>Durée de conservation :</strong> les signalements sont stockés tant qu'ils sont nécessaires à la fiabilisation des prix. Ils ne contiennent ni nom, ni adresse, ni identifiant d'appareil — seul un hash d'IP anonyme y est associé.</p>
     </div>
   </div>
 
   <div class="card">
-    <h2>Identifiant Android (Android ID) — Rate limiting</h2>
-    <p>Un identifiant technique propre à votre appareil est utilisé pour limiter le nombre de calculs d'itinéraire gratuits par jour (3 calculs/jour en version gratuite). Cet identifiant n'est jamais associé à votre identité et ne permet pas de vous identifier personnellement.</p>
+    <h2>Identifiant d'installation</h2>
+    <p>Au premier lancement de l'application, un identifiant unique aléatoire est généré localement sur votre appareil et stocké dans un espace de stockage chiffré. Cet identifiant ne contient aucune information personnelle, n'est pas dérivé d'un identifiant matériel, et ne permet pas de vous identifier personnellement.</p>
     <div class="list">
       <div class="list-item">
         <div class="list-item-marker"></div>
-        <p><strong>Base légale :</strong> Intérêt légitime — protection contre les abus et équité d'accès au service (Article 6.1.f du RGPD)</p>
+        <p><strong>Base légale :</strong> Intérêt légitime — fonctionnement du service, protection contre les abus, et équité d'accès (Article 6.1.f du RGPD)</p>
       </div>
       <div class="list-item">
-        <div class="list-item-marker orange"></div>
-        <p><strong>Durée de conservation :</strong> 24 heures — les compteurs sont réinitialisés chaque jour automatiquement</p>
+        <div class="list-item-marker"></div>
+        <p><strong>Finalités :</strong></p>
       </div>
       <div class="list-item">
         <div class="list-item-marker green"></div>
-        <p><strong>Partage ?</strong> Cet identifiant n'est jamais partagé avec des tiers ni utilisé à des fins publicitaires.</p>
+        <p>Rattacher vos alertes de prix à votre appareil sans nécessiter de compte utilisateur</p>
+      </div>
+      <div class="list-item">
+        <div class="list-item-marker green"></div>
+        <p>Associer votre token de notification (FCM) à votre installation</p>
+      </div>
+      <div class="list-item">
+        <div class="list-item-marker green"></div>
+        <p>Vérifier votre statut Premium (essai gratuit dans la version actuelle ; abonnement payant dans une mise à jour ultérieure, via Google Play Billing / RevenueCat)</p>
+      </div>
+      <div class="list-item">
+        <div class="list-item-marker green"></div>
+        <p>Appliquer les quotas journaliers (3 calculs d'itinéraire/jour en version gratuite, 20/jour en Premium)</p>
+      </div>
+      <div class="list-item">
+        <div class="list-item-marker orange"></div>
+        <p><strong>Durée de conservation :</strong> tant que l'application est installée. Les compteurs de quota (3/jour) sont réinitialisés automatiquement chaque jour. L'identifiant est conservé dans un stockage sécurisé du téléphone : il peut survivre à <em>Paramètres &rarr; Effacer les données locales</em> selon la configuration de votre appareil, et n'est garanti supprimé qu'à la désinstallation de l'application ou sur demande à <a href="mailto:contact@skenta.app">contact@skenta.app</a>.</p>
+      </div>
+      <div class="list-item">
+        <div class="list-item-marker green"></div>
+        <p><strong>Partage ?</strong> Cet identifiant est transmis à nos serveurs et à RevenueCat (gestion d'abonnement). Il n'est jamais utilisé à des fins publicitaires ni partagé avec des annonceurs.</p>
       </div>
     </div>
   </div>
 
   <div class="card">
     <h2>Adresse e-mail Google — Essai Premium via vidéo récompensée</h2>
-    <p>Si vous choisissez de débloquer un essai gratuit de 30 jours Premium en regardant des vidéos récompensées, vous devez vous connecter avec votre compte Google. Dans ce cas, votre adresse e-mail est utilisée pour vérifier que l'essai gratuit n'a pas déjà été utilisé (une seule utilisation par compte).</p>
+    <p>Si vous choisissez de débloquer un essai gratuit de 7 jours Premium en regardant des vidéos récompensées, vous devez vous connecter avec votre compte Google. Dans ce cas, votre adresse e-mail est utilisée pour vérifier que l'essai gratuit n'a pas déjà été utilisé (une seule utilisation par compte).</p>
     <div class="list">
       <div class="list-item">
         <div class="list-item-marker"></div>
@@ -451,7 +486,11 @@
       </div>
       <div class="list-item">
         <div class="list-item-marker orange"></div>
-        <p><strong>Traitement :</strong> Votre adresse e-mail est transformée en un condensat cryptographique non réversible (SHA-256) avant d'être stockée. L'adresse brute n'est jamais enregistrée sur nos serveurs.</p>
+        <p><strong>Traitement côté application :</strong> votre adresse e-mail est conservée localement sur votre appareil pendant la durée d'utilisation de l'application, pour gérer l'état de votre essai en cours. Elle est supprimée à la désinstallation et via <em>Paramètres &rarr; Effacer les données locales</em>. Elle n'est jamais utilisée pour vous contacter.</p>
+      </div>
+      <div class="list-item">
+        <div class="list-item-marker orange"></div>
+        <p><strong>Traitement côté serveur :</strong> votre adresse e-mail est transmise à nos serveurs via une connexion chiffrée HTTPS puis immédiatement transformée en un condensat cryptographique non réversible (SHA-256) à la réception. Seul ce hash est stocké en base de données — l'adresse brute n'est jamais enregistrée sur nos serveurs.</p>
       </div>
       <div class="list-item">
         <div class="list-item-marker orange"></div>
@@ -471,6 +510,73 @@
     </div>
   </div>
 
+  <div class="card">
+    <h2>Abonnement Premium (Google Play Billing &amp; RevenueCat)</h2>
+    <div class="notice notice-amber">
+      <p><strong>Statut :</strong> dans la version actuellement publiée sur Google Play, l'abonnement Premium payant n'est pas activé. Aucune donnée d'abonnement payant n'est traitée dans cette version. La section ci-dessous décrit ce qui sera traité lorsque l'abonnement payant sera activé dans une mise à jour ultérieure ; elle ne s'applique pas à la version courante.</p>
+    </div>
+    <p>Lorsque l'abonnement Premium payant sera activé, les achats seront gérés par Google Play Billing (Google LLC) et l'état d'abonnement sera synchronisé par RevenueCat, Inc.</p>
+    <div class="list">
+      <div class="list-item">
+        <div class="list-item-marker"></div>
+        <p><strong>Base légale :</strong> Exécution du contrat — fourniture du service Premium souscrit (Article 6.1.b du RGPD)</p>
+      </div>
+      <div class="list-item">
+        <div class="list-item-marker green"></div>
+        <p><strong>Données traitées :</strong> identifiant d'installation, identifiant du produit (mensuel ou annuel), date d'achat, date d'expiration, statut de l'abonnement.</p>
+      </div>
+      <div class="list-item">
+        <div class="list-item-marker orange"></div>
+        <p><strong>Données non collectées par Skenta :</strong> les informations de paiement (numéro de carte, identité du payeur, adresse de facturation) sont traitées exclusivement par Google et ne nous sont jamais transmises.</p>
+      </div>
+      <div class="list-item">
+        <div class="list-item-marker orange"></div>
+        <p><strong>Durée de conservation prévue :</strong> jusqu'à 2 ans après la dernière transaction, pour répondre aux obligations fiscales et aux demandes de remboursement.</p>
+      </div>
+    </div>
+    <div class="notice notice-amber">
+      <p>RevenueCat, Inc. est une société américaine. Les données qui lui seront transmises (lorsque le service sera activé) pourront transiter vers ses serveurs situés aux États-Unis, dans le cadre des clauses contractuelles types approuvées par la Commission Européenne (Article 46 du RGPD). Politique de confidentialité RevenueCat : <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a>.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Calcul d'itinéraire optimisé (fonction « Trajet »)</h2>
+    <p>Lorsque vous utilisez la fonction de calcul d'itinéraire optimisé (recherche de la meilleure station-service sur votre route), les données suivantes sont transmises à nos serveurs :</p>
+    <div class="list">
+      <div class="list-item">
+        <div class="list-item-marker"></div>
+        <p><strong>Base légale :</strong> Exécution du service demandé (Article 6.1.b du RGPD)</p>
+      </div>
+      <div class="list-item">
+        <div class="list-item-marker"></div>
+        <p><strong>Coordonnées GPS</strong> du point de départ et du point d'arrivée</p>
+      </div>
+      <div class="list-item">
+        <div class="list-item-marker"></div>
+        <p><strong>Texte d'adresse</strong> saisi dans la barre de recherche (pour l'autocomplétion et le géocodage)</p>
+      </div>
+      <div class="list-item">
+        <div class="list-item-marker"></div>
+        <p><strong>Caractéristiques du véhicule actif</strong> (uniquement pour ce calcul) : type de carburant, consommation moyenne, capacité du réservoir, niveau actuel</p>
+      </div>
+      <div class="list-item">
+        <div class="list-item-marker"></div>
+        <p><strong>Votre identifiant d'installation</strong> pour appliquer le quota journalier (3 calculs/jour en gratuit, 20/jour en Premium)</p>
+      </div>
+      <div class="list-item">
+        <div class="list-item-marker green"></div>
+        <p><strong>Aucune persistance :</strong> ces données sont utilisées uniquement pour calculer la réponse, puis supprimées. Aucun historique de trajet n'est stocké côté serveur.</p>
+      </div>
+      <div class="list-item">
+        <div class="list-item-marker orange"></div>
+        <p><strong>Géocodage inversé :</strong> lorsque vous sélectionnez un point sur la carte pour obtenir une adresse, une requête est envoyée au service public <strong>api-adresse.data.gouv.fr</strong> (Base Adresse Nationale, État français).</p>
+      </div>
+    </div>
+    <div class="notice notice-amber">
+      <p>Les caractéristiques de votre véhicule sont stockées localement sur votre appareil et ne quittent jamais celui-ci en dehors d'un calcul d'itinéraire actif.</p>
+    </div>
+  </div>
+
   <!-- 3. Publicité -->
   <div class="section-label">Publicité</div>
 
@@ -484,7 +590,7 @@
       </div>
       <div class="list-item">
         <div class="list-item-marker green"></div>
-        <p><strong>En cas de refus :</strong> seules des publicités non personnalisées sont diffusées — l'identifiant publicitaire Android (GAID) n'est pas utilisé.</p>
+        <p><strong>En cas de refus :</strong> les annonces sont chargées en mode non personnalisé, selon les choix de consentement transmis au SDK Google. Vous pouvez à tout moment réafficher ce formulaire via <em>Paramètres &rarr; Gérer mes préférences publicitaires</em>.</p>
       </div>
       <div class="list-item">
         <div class="list-item-marker orange"></div>
@@ -510,7 +616,7 @@
       </div>
       <div class="list-item">
         <div class="list-item-marker green"></div>
-        <p>Les données sensibles (localisation, token FCM) sont supprimées des serveurs dès que le traitement est terminé.</p>
+        <p>Les coordonnées GPS et les paramètres véhicule envoyés lors d'une recherche ou d'un calcul d'itinéraire sont utilisés uniquement pour produire la réponse, puis supprimés. Les autres données nécessaires au fonctionnement du service (token FCM, identifiant d'installation, alertes, abonnement) sont conservées selon les durées indiquées dans la section <em>Durées de conservation</em>.</p>
       </div>
       <div class="list-item">
         <div class="list-item-marker orange"></div>
@@ -558,9 +664,27 @@
           <td>États-Unis (CCT)</td>
         </tr>
         <tr>
+          <td>Google Play Billing (non actif dans la version actuelle)</td>
+          <td>Google LLC</td>
+          <td>Paiement et gestion des abonnements Premium (activation prévue)</td>
+          <td>États-Unis (CCT)</td>
+        </tr>
+        <tr>
+          <td>RevenueCat (non actif dans la version actuelle)</td>
+          <td>RevenueCat, Inc.</td>
+          <td>Synchronisation et restauration des abonnements Premium (activation prévue)</td>
+          <td>États-Unis (CCT)</td>
+        </tr>
+        <tr>
+          <td>Base Adresse Nationale</td>
+          <td>data.gouv.fr (État français)</td>
+          <td>Géocodage inversé d'une adresse à partir d'un point sur la carte</td>
+          <td>France (UE)</td>
+        </tr>
+        <tr>
           <td>API Skenta</td>
           <td>Hetzner Online GmbH</td>
-          <td>Données prix carburant</td>
+          <td>Données prix carburant, alertes, signalements, calcul d'itinéraire</td>
           <td>Allemagne (UE)</td>
         </tr>
       </table>
@@ -573,28 +697,40 @@
 
   <div class="card">
     <h2>Vos droits</h2>
-    <p>Skenta collecte un minimum de données : un token FCM anonyme (si vous activez les notifications), des signalements de prix anonymes, un identifiant appareil pour le rate limiting, et optionnellement un hash de votre e-mail Google si vous utilisez l'essai Premium via vidéo récompensée. Aucun nom, prénom ou compte utilisateur permanent n'est créé.</p>
+    <p>Skenta collecte un minimum de données : un UUID d'installation pour rattacher vos alertes et votre statut d'abonnement, un token FCM anonyme (si vous activez les notifications), des signalements de prix anonymes (hash d'IP uniquement), des données d'abonnement Premium si vous souscrivez, et optionnellement un hash de votre e-mail Google si vous utilisez l'essai Premium via vidéo récompensée. Aucun nom, prénom ou compte utilisateur permanent n'est créé.</p>
     <p>Pour ces données, vous disposez des droits suivants :</p>
     <div class="list">
       <div class="list-item">
         <div class="list-item-marker green"></div>
-        <p><strong>Depuis l'application :</strong> <em>Paramètres &rarr; Effacer mes données</em></p>
+        <p><strong>Effacer les données locales :</strong> <em>Paramètres &rarr; Effacer les données locales</em>. Supprime sur votre appareil les véhicules, favoris, préférences et cache des stations. L'identifiant d'installation, stocké dans un espace sécurisé du système, peut être conservé selon la configuration de votre appareil — il n'est garanti supprimé qu'à la désinstallation. <strong>Cette action n'efface pas vos données serveur</strong> (alertes, statut Premium) — utilisez les actions ci-dessous pour cela.</p>
+      </div>
+      <div class="list-item">
+        <div class="list-item-marker green"></div>
+        <p><strong>Supprimer mes alertes serveur :</strong> <em>Paramètres &rarr; Supprimer toutes mes alertes</em>.</p>
       </div>
       <div class="list-item" id="supprimer-vos-donnees">
         <div class="list-item-marker green"></div>
-        <p><strong>Suppression du token FCM :</strong> Envoyez un e-mail à <a href="mailto:contact@skenta.app?subject=Demande%20de%20suppression%20de%20donn%C3%A9es">contact@skenta.app</a> avec le sujet <em>"Demande de suppression de données"</em>. Traitement dans les meilleurs délais (au plus tard sous 30 jours, conformément au RGPD).</p>
+        <p><strong>Suppression du token FCM, de l'historique d'abonnement ou du hash e-mail :</strong> envoyez un e-mail à <a href="mailto:contact@skenta.app?subject=Demande%20de%20suppression%20de%20donn%C3%A9es">contact@skenta.app</a>. Traitement sous 30 jours maximum, conformément au RGPD.</p>
       </div>
       <div class="list-item">
         <div class="list-item-marker"></div>
-        <p><strong>Retrait du consentement publicitaire :</strong> via <em>Paramètres &rarr; Gérer mes préférences publicitaires</em> à tout moment</p>
+        <p><strong>Gérer ou résilier un abonnement Premium :</strong> directement depuis Google Play Store &rarr; Abonnements.</p>
       </div>
       <div class="list-item">
         <div class="list-item-marker"></div>
-        <p><strong>Toute autre demande</strong> (accès, opposition, réclamation) : <a href="mailto:contact@skenta.app">contact@skenta.app</a></p>
+        <p><strong>Retrait du consentement publicitaire :</strong> via <em>Paramètres &rarr; Gérer mes préférences publicitaires</em>.</p>
       </div>
       <div class="list-item">
         <div class="list-item-marker"></div>
-        <p><strong>Réclamation auprès de la CNIL :</strong> <a href="https://www.cnil.fr" target="_blank">cnil.fr</a></p>
+        <p><strong>Droits RGPD :</strong> accès, rectification, opposition, limitation, portabilité, retrait du consentement — <a href="mailto:contact@skenta.app">contact@skenta.app</a>.</p>
+      </div>
+      <div class="list-item">
+        <div class="list-item-marker"></div>
+        <p><strong>Décision automatisée :</strong> Skenta n'effectue aucune décision automatisée ni profilage produisant des effets juridiques à votre égard.</p>
+      </div>
+      <div class="list-item">
+        <div class="list-item-marker"></div>
+        <p><strong>Réclamation auprès de la CNIL :</strong> <a href="https://www.cnil.fr" target="_blank">cnil.fr</a>.</p>
       </div>
     </div>
   </div>
@@ -612,9 +748,14 @@
           <th>Suppression</th>
         </tr>
         <tr>
-          <td>Token FCM</td>
-          <td>180 jours d'inactivité (Firebase)</td>
-          <td>Immédiat à la désinstallation, ou sur demande</td>
+          <td>Token FCM (local)</td>
+          <td>Durée d'utilisation de l'application</td>
+          <td><em>Paramètres &rarr; Effacer les données locales</em> ou désinstallation</td>
+        </tr>
+        <tr>
+          <td>Token FCM (serveur Skenta + Firebase)</td>
+          <td>Jusqu'à 180 jours d'inactivité (invalidation automatique Firebase)</td>
+          <td>Sur demande à contact@skenta.app</td>
         </tr>
         <tr>
           <td>Alertes de prix</td>
@@ -622,27 +763,32 @@
           <td>Expiration automatique</td>
         </tr>
         <tr>
-          <td>Signalements de prix</td>
-          <td>12 mois glissants</td>
-          <td>Purge automatique mensuelle</td>
+          <td>Signalements de prix (anonymes — hash d'IP uniquement)</td>
+          <td>Durée nécessaire à la fiabilisation des prix</td>
+          <td>Sur demande à contact@skenta.app</td>
         </tr>
         <tr>
-          <td>Données locales (véhicules, favoris)</td>
-          <td>Durée d'utilisation de l'app</td>
-          <td>Désinstallation de l'application</td>
+          <td>Données locales (véhicules, favoris, préférences, e-mail trial)</td>
+          <td>Durée d'utilisation de l'application</td>
+          <td><em>Paramètres &rarr; Effacer les données locales</em> ou désinstallation</td>
         </tr>
         <tr>
-          <td>Coordonnées GPS</td>
+          <td>Identifiant d'installation (stockage sécurisé)</td>
+          <td>Durée d'utilisation de l'application</td>
+          <td>Désinstallation (ou sur demande à contact@skenta.app)</td>
+        </tr>
+        <tr>
+          <td>Données de calcul d'itinéraire (coordonnées GPS, paramètres véhicule)</td>
           <td>Non conservées</td>
           <td>Suppression immédiate après traitement</td>
         </tr>
         <tr>
-          <td>Android ID (rate limiting)</td>
-          <td>24 heures</td>
-          <td>Réinitialisation automatique quotidienne</td>
+          <td>Abonnement Premium (statut, dates, identifiant produit) — applicable uniquement lorsque le Premium payant sera activé</td>
+          <td>Jusqu'à 2 ans après la dernière transaction</td>
+          <td>Sur demande à contact@skenta.app</td>
         </tr>
         <tr>
-          <td>Hash e-mail Google (trial Premium)</td>
+          <td>Hash e-mail Google (trial Premium, serveur)</td>
           <td>2 ans maximum</td>
           <td>Sur demande à contact@skenta.app</td>
         </tr>
@@ -688,7 +834,7 @@
       </div>
       <div class="list-item">
         <div class="list-item-marker green"></div>
-        <p>Données locales (véhicules, favoris, préférences) qui ne quittent jamais l'appareil</p>
+        <p>Données stockées localement (véhicules, favoris, préférences) — non envoyées en arrière-plan ; certaines caractéristiques véhicule sont transmises ponctuellement lors d'un calcul d'itinéraire</p>
       </div>
     </div>
     <div class="notice notice-green">
